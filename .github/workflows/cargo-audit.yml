@@ -39,4 +39,4 @@ jobs:
         # atty has been replaced in clap and env_logger:
         # https://github.com/clap-rs/clap/pull/4249
         # https://github.com/rust-cli/env_logger/pull/246
-        run: cargo audit --ignore RUSTSEC-2020-0071 --ignore RUSTSEC-2021-0145
+        run: cargo audit --ignore RUSTSEC-2020-0071
