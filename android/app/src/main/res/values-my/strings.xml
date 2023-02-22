@@ -19,7 +19,6 @@
     <string name="auto_connect_footer">အက်ပ် စတင်ဆောင်ရွက်ချိန်တွင် ဆာဗာနှင့် အော်တို ချိတ်ဆက်သွားပါမည်။</string>
     <string name="back">နောက်သို့</string>
     <string name="blocked_connection">ပိတ်ဆို့ထားသည့် ချိတ်ဆက်မှု</string>
-    <string name="blocking_all_connections">ချိတ်ဆက်မှု အားလုံးကို ပိတ်ဆို့ထားပါသည်</string>
     <string name="blocking_internet">အင်တာနက် ပိတ်ဆို့နေပါသည်</string>
     <string name="buy_credit">ခရက်ဒစ် ဝယ်ရန်</string>
     <string name="buy_more_credit">ခရက်ဒစ်များ ဝယ်ရန်</string>

@@ -19,7 +19,6 @@
     <string name="auto_connect_footer">Automatycznie łącz z serwerem po uruchomieniu aplikacji.</string>
     <string name="back">Wstecz</string>
     <string name="blocked_connection">ZABLOKOWANE POŁĄCZENIE</string>
-    <string name="blocking_all_connections">Blokowanie wszystkich połączeń</string>
     <string name="blocking_internet">Blokowanie Internetu</string>
     <string name="buy_credit">Kup doładowanie</string>
     <string name="buy_more_credit">Doładuj konto</string>

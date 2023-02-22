@@ -19,7 +19,6 @@
     <string name="auto_connect_footer">Automatisch verbinden met een server wanneer de app wordt gestart.</string>
     <string name="back">Terug</string>
     <string name="blocked_connection">VERBINDING GEBLOKKEERD</string>
-    <string name="blocking_all_connections">Alle verbindingen worden geblokkeerd</string>
     <string name="blocking_internet">Internet blokkeren</string>
     <string name="buy_credit">Krediet kopen</string>
     <string name="buy_more_credit">Meer krediet kopen</string>

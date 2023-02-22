@@ -19,7 +19,6 @@
     <string name="auto_connect_footer">Opret automatisk forbindelse til en server, når appen starter.</string>
     <string name="back">Tilbage</string>
     <string name="blocked_connection">FORBINDELSE BLOKERET</string>
-    <string name="blocking_all_connections">Blokerer alle forbindelser</string>
     <string name="blocking_internet">Blokerer internettet</string>
     <string name="buy_credit">Køb kredit</string>
     <string name="buy_more_credit">Køb mere kredit</string>

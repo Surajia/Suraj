@@ -19,7 +19,6 @@
     <string name="auto_connect_footer">アプリ起動時に自動的にサーバーに接続します。</string>
     <string name="back">戻る</string>
     <string name="blocked_connection">ブロックされた接続</string>
-    <string name="blocking_all_connections">すべての接続をブロックしています</string>
     <string name="blocking_internet">インターネットをブロック中</string>
     <string name="buy_credit">クレジットを購入</string>
     <string name="buy_more_credit">追加クレジットを購入</string>
