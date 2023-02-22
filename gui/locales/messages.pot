@@ -1626,6 +1626,9 @@ msgstr ""
 msgid "Blocking all connections"
 msgstr ""
 
+msgid "Blocking internet (device offline)"
+msgstr ""
+
 msgid "Copied Mullvad account number to clipboard"
 msgstr ""
 
