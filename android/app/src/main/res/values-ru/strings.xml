@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">Учетная запись создана</string>
-    <string name="account_credit_expires_in_a_few_minutes">Баланс учетной записи закончится через несколько минут</string>
+    <string name="account_credit_expired_notification">Время на учетной записи вышло</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s. Пополните баланс.</string>
+    <string name="account_credit_expires_notification">Баланс на учетной записи заканчивается через %1$s. Пополните баланс.</string>
     <string name="account_credit_expires_soon">Баланс учетной записи скоро закончится</string>
     <string name="account_credit_has_expired">На этой учетной записи времени VPN не осталось.</string>
     <string name="account_number">Номер учетной записи</string>

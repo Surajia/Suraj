@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <plurals name="account_credit_expires_in_days">
+        <item quantity="other">%1$d 天</item>
+    </plurals>
     <plurals name="days_left">
         <item quantity="other">剩余 %1$d 天</item>
     </plurals>
@@ -23,11 +26,5 @@
     </plurals>
     <plurals name="hours_ago">
         <item quantity="other">%1$d 小时前</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_days">
-        <item quantity="other">帐户额度将在 %1$d 天后到期</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_hours">
-        <item quantity="other">帐户额度将在 %1$d 小时后到期</item>
     </plurals>
 </resources>

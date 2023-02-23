@@ -19,7 +19,13 @@ class AccountExpiryNotification(
         val threeDaysFromNow = DateTime.now().plusDays(3)
 
         if (expiry != null && expiry.isBefore(threeDaysFromNow)) {
-            message = timeLeftFormatter.format(expiry)
+            val formattedRemainingTime =
+                timeLeftFormatter.format(expiry).replaceFirstChar { char -> char.uppercase() }
+            message =
+                resources.getString(
+                    R.string.account_credit_expires_in_app_reminder,
+                    formattedRemainingTime
+                )
             shouldShow = true
         } else {
             shouldShow = false

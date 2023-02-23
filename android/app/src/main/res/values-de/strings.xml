@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">Konto erstellt</string>
-    <string name="account_credit_expires_in_a_few_minutes">Kontoguthaben läuft in wenigen Minuten ab</string>
+    <string name="account_credit_expired_notification">Die Zeit auf dem Konto ist ausgelaufen</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s. Mehr Guthaben erwerben.</string>
+    <string name="account_credit_expires_notification">Kontoguthaben läuft in %1$s ab. Erwerben Sie mehr Guthaben.</string>
     <string name="account_credit_expires_soon">Kontoguthaben läuft bald ab</string>
     <string name="account_credit_has_expired">Sie haben keine VPN-Zeit mehr auf diesem Konto.</string>
     <string name="account_number">Kontonummer</string>

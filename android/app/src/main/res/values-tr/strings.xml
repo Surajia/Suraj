@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">Hesap oluşturuldu</string>
-    <string name="account_credit_expires_in_a_few_minutes">Hesap kredisinin süresi birkaç dakika içinde doluyor</string>
+    <string name="account_credit_expired_notification">Hesabın süresi doldu</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s. Daha fazla kredi satın alın.</string>
+    <string name="account_credit_expires_notification">Hesap kredisi %1$s içinde sona eriyor. Daha fazla kredi satın alın.</string>
     <string name="account_credit_expires_soon">Hesap kredisinin süresi yakında doluyor</string>
     <string name="account_credit_has_expired">Bu hesap için artık VPN süreniz kalmadı.</string>
     <string name="account_number">Hesap Kimliği</string>

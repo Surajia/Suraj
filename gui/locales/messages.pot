@@ -1596,9 +1596,6 @@ msgstr ""
 msgid "Account authentication failed."
 msgstr ""
 
-msgid "Account credit expires in a few minutes"
-msgstr ""
-
 msgid "Account credit expires soon"
 msgstr ""
 
@@ -1773,12 +1770,10 @@ msgstr ""
 msgid "You are running an unsupported app version."
 msgstr ""
 
-msgid "Account credit expires in a day"
-msgid_plural "Account credit expires in %d days"
-msgstr[0] ""
-msgstr[1] ""
+msgid "a few minutes"
+msgstr ""
 
-msgid "Account credit expires in an hour"
-msgid_plural "Account credit expires in %d hours"
+msgid "1 hour"
+msgid_plural "%d hours"
 msgstr[0] ""
 msgstr[1] ""

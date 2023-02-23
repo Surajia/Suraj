@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <plurals name="account_credit_expires_in_days">
+        <item quantity="one">1 jour</item>
+        <item quantity="other">%1$d jours</item>
+    </plurals>
     <plurals name="days_left">
         <item quantity="one">1 jour restant</item>
         <item quantity="other">%1$d jours restants</item>
@@ -31,13 +35,5 @@
     <plurals name="hours_ago">
         <item quantity="one">il y a une heure</item>
         <item quantity="other">Il y a %1$d heures</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_days">
-        <item quantity="one">Les crédits du compte expirent dans un jour</item>
-        <item quantity="other">Les crédits du compte expirent dans %1$d jours</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_hours">
-        <item quantity="one">Les crédits du compte expirent dans une heure</item>
-        <item quantity="other">Les crédits du compte expirent dans %1$d heures</item>
     </plurals>
 </resources>

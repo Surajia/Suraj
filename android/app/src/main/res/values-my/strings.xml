@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">အကောင့် ဖန်တီးပြီး</string>
-    <string name="account_credit_expires_in_a_few_minutes">မိနစ်အနည်းငယ်အကြာတွင် အကောင့်ခရက်ဒစ် သက်တမ်းကုန်ပါတော့မည်</string>
+    <string name="account_credit_expired_notification">အကောင့် အချိန်စေ့သွားပါပြီ</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s ။ နောက်ထပ် ခရက်ဒစ်များ ဝယ်ယူပါ။</string>
+    <string name="account_credit_expires_notification">အကောင့်ခရက်ဒစ်သည် %1$s တွင် သက်တမ်းကုန်ပါမည်။ နောက်ထပ် ခရက်ဒစ်များ ဝယ်ပါ။</string>
     <string name="account_credit_expires_soon">မကြာမီ အကောင့် ခရက်ဒစ် သက်တမ်းကုန်ပါတော့မည်</string>
     <string name="account_credit_has_expired">ဤအကောင့်တွင် နောက်ထပ် VPN သုံးနိုင်ချိန် မကျန်တော့ပါ။</string>
     <string name="account_number">အကောင့် နံပါတ်</string>

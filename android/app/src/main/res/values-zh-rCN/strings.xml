@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">已创建帐户</string>
-    <string name="account_credit_expires_in_a_few_minutes">帐户额度将在几分钟后到期</string>
+    <string name="account_credit_expired_notification">帐户已没有时间</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s。购买更多额度。</string>
+    <string name="account_credit_expires_notification">帐户额度将在 %1$s后到期。购买更多额度。</string>
     <string name="account_credit_expires_soon">帐户额度即将到期</string>
     <string name="account_credit_has_expired">此帐户没有更多的 VPN 时间了。</string>
     <string name="account_number">帐号</string>

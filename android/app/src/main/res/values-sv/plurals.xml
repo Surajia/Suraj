@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <plurals name="account_credit_expires_in_days">
+        <item quantity="one">1 dag</item>
+        <item quantity="other">%1$d dagar</item>
+    </plurals>
     <plurals name="days_left">
         <item quantity="one">1 dag kvar</item>
         <item quantity="other">%1$d dagar kvar</item>
@@ -31,13 +35,5 @@
     <plurals name="hours_ago">
         <item quantity="one">en timme sedan</item>
         <item quantity="other">%1$d timmar sedan</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_days">
-        <item quantity="one">Kontokrediten slutar gälla om en dag</item>
-        <item quantity="other">Kontokrediten slutar gälla om %1$d dagar</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_hours">
-        <item quantity="one">Kontokrediten slutar gälla om en timme</item>
-        <item quantity="other">Kontokrediten slutar gälla om %1$d timmar</item>
     </plurals>
 </resources>

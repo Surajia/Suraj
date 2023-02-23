@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <plurals name="account_credit_expires_in_days">
+        <item quantity="other">%1$d일</item>
+    </plurals>
     <plurals name="days_left">
         <item quantity="other">%1$d일 남음</item>
     </plurals>
@@ -23,11 +26,5 @@
     </plurals>
     <plurals name="hours_ago">
         <item quantity="other">%1$d시간 전</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_days">
-        <item quantity="other">계정 크레딧이 %1$d일 후에 만료됩니다.</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_hours">
-        <item quantity="other">계정 크레딧이 %1$d시간 후에 만료됩니다.</item>
     </plurals>
 </resources>

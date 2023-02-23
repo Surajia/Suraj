@@ -33,11 +33,11 @@
         <item quantity="other">%d years ago</item>
     </plurals>
     <plurals name="account_credit_expires_in_days">
-        <item quantity="one">Account credit expires in a day</item>
-        <item quantity="other">Account credit expires in %d days</item>
+        <item quantity="one">1 day</item>
+        <item quantity="other">%d days</item>
     </plurals>
     <plurals name="account_credit_expires_in_hours">
-        <item quantity="one">Account credit expires in an hour</item>
-        <item quantity="other">Account credit expires in %d hours</item>
+        <item quantity="one">1 hour</item>
+        <item quantity="other">%d hours</item>
     </plurals>
 </resources>

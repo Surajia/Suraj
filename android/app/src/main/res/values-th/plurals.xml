@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <plurals name="account_credit_expires_in_days">
+        <item quantity="other">%1$d วัน</item>
+    </plurals>
     <plurals name="days_left">
         <item quantity="other">คงเหลือ %1$d วัน</item>
     </plurals>
@@ -23,11 +26,5 @@
     </plurals>
     <plurals name="hours_ago">
         <item quantity="other">%1$d ชั่วโมงก่อน</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_days">
-        <item quantity="other">เครดิตของบัญชีจะหมดอายุใน %1$d วัน</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_hours">
-        <item quantity="other">เครดิตของบัญชีจะหมดอายุใน %1$d ชั่วโมง</item>
     </plurals>
 </resources>

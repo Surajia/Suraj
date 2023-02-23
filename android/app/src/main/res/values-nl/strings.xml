@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">Account aangemaakt</string>
-    <string name="account_credit_expires_in_a_few_minutes">Accountkrediet verloopt over enkele minuten</string>
+    <string name="account_credit_expired_notification">Account heeft geen tijd meer</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s. Koop meer krediet.</string>
+    <string name="account_credit_expires_notification">Accountkrediet verloopt over %1$s. Koop meer krediet.</string>
     <string name="account_credit_expires_soon">Accountkrediet verloopt binnenkort</string>
     <string name="account_credit_has_expired">U hebt geen VPN-tijd meer op dit account.</string>
     <string name="account_number">Accountnummer</string>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <plurals name="account_credit_expires_in_days">
+        <item quantity="other">%1$d 日</item>
+    </plurals>
     <plurals name="days_left">
         <item quantity="other">残り%1$d日</item>
     </plurals>
@@ -23,11 +26,5 @@
     </plurals>
     <plurals name="hours_ago">
         <item quantity="other">%1$d時間前</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_days">
-        <item quantity="other">アカウントのクレジットが%1$d日後に無効になります</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_hours">
-        <item quantity="other">アカウントのクレジットが%1$d時間後に無効になります</item>
     </plurals>
 </resources>

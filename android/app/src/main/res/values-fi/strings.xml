@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">Tili luotu</string>
-    <string name="account_credit_expires_in_a_few_minutes">Tilin käyttöaika päättyy muutaman minuutin kuluttua</string>
+    <string name="account_credit_expired_notification">Tilin käyttöaika on kulunut loppuun</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s. Osta lisää käyttöaikaa.</string>
+    <string name="account_credit_expires_notification">Tilin käyttöaikaa on jäljellä %1$s. Osta lisää käyttöaikaa.</string>
     <string name="account_credit_expires_soon">Tilin käyttöaika päättyy pian</string>
     <string name="account_credit_has_expired">Sinulla ei ole enempää VPN-aikaa jäljellä tällä tilillä.</string>
     <string name="account_number">Tilin numero</string>

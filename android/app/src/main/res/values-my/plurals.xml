@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <plurals name="account_credit_expires_in_days">
+        <item quantity="other">%1$d ရက်</item>
+    </plurals>
     <plurals name="days_left">
         <item quantity="other">%1$d ရက်သာ ကျန်တော့သည်</item>
     </plurals>
@@ -23,11 +26,5 @@
     </plurals>
     <plurals name="hours_ago">
         <item quantity="other">လွန်ခဲ့သော %1$d နာရီ</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_days">
-        <item quantity="other">%1$d ရက်အကြာတွင် အကောင့်ခရက်ဒစ် သက်တမ်းကုန်ပါတော့မည်</item>
-    </plurals>
-    <plurals name="account_credit_expires_in_hours">
-        <item quantity="other">%1$d နာရီအကြာတွင် အကောင့်ခရက်ဒစ် သက်တမ်းကုန်ပါတော့မည်</item>
     </plurals>
 </resources>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">Utworzono konto</string>
-    <string name="account_credit_expires_in_a_few_minutes">Doładowanie konta wygasa za kilka minut</string>
+    <string name="account_credit_expired_notification">Na koncie nie ma już czasu</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s. Doładuj konto.</string>
+    <string name="account_credit_expires_notification">Doładowanie konta wygasa za %1$s. Doładuj konto.</string>
     <string name="account_credit_expires_soon">Doładowanie konta wkrótce wygasa</string>
     <string name="account_credit_has_expired">Na tym koncie nie masz już czasu VPN.</string>
     <string name="account_number">Numer konta</string>

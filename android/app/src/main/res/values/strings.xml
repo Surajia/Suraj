@@ -41,8 +41,11 @@
     <string name="settings_account">Account</string>
     <string name="less_than_a_day_left">less than a day left</string>
     <string name="less_than_a_minute_ago">less than a minute ago</string>
-    <string name="account_credit_expires_in_a_few_minutes">Account credit expires in a few
-    minutes</string>
+    <string name="account_credit_expires_in_a_few_minutes">a few minutes</string>
+    <string name="account_credit_expires_in_app_reminder">%s. Buy more credit.</string>
+    <string name="account_credit_expires_notification">Account credit expires in %s. Buy more
+    credit.</string>
+    <string name="account_credit_expired_notification">Account is out of time</string>
     <string name="account_credit_has_expired">You have no more VPN time left on this
     account.</string>
     <string name="out_of_time">Out of time</string>

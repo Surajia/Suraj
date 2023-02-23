@@ -105,28 +105,36 @@ class AccountExpiryNotification(
     }
 
     private fun format(expiry: DateTime, remainingTime: Duration): String {
-        if (remainingTime.isShorterThan(Duration.ZERO)) {
-            return resources.getString(R.string.account_credit_has_expired)
+        return if (remainingTime.isShorterThan(Duration.ZERO)) {
+            resources.getString(R.string.account_credit_expired_notification)
         } else {
             val remainingTimeInfo = remainingTime.toPeriodTo(expiry)
 
             if (remainingTimeInfo.days >= 1) {
-                return getRemainingText(
+                getRemainingText(
                     R.plurals.account_credit_expires_in_days,
                     remainingTime.standardDays.toInt()
                 )
             } else if (remainingTimeInfo.hours >= 1) {
-                return getRemainingText(
+                getRemainingText(
                     R.plurals.account_credit_expires_in_hours,
                     remainingTime.standardHours.toInt()
                 )
             } else {
-                return resources.getString(R.string.account_credit_expires_in_a_few_minutes)
+                resources.getString(
+                    R.string.account_credit_expires_notification,
+                    resources.getString(R.string.account_credit_expires_in_a_few_minutes)
+                )
             }
         }
     }
 
     private fun getRemainingText(pluralId: Int, quantity: Int): String {
-        return resources.getQuantityString(pluralId, quantity, quantity)
+        return with(resources) {
+            getString(
+                R.string.account_credit_expires_notification,
+                getQuantityString(pluralId, quantity, quantity)
+            )
+        }
     }
 }

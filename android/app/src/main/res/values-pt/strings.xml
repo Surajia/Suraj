@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">Conta criada</string>
-    <string name="account_credit_expires_in_a_few_minutes">O crédito da conta expira dentro de alguns minutos</string>
+    <string name="account_credit_expired_notification">A conta está sem tempo</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s. Comprar mais crédito.</string>
+    <string name="account_credit_expires_notification">O crédito da conta expira em %1$s. Comprar mais crédito.</string>
     <string name="account_credit_expires_soon">O crédito da conta expira brevemente</string>
     <string name="account_credit_has_expired">Não tem mais Tempo de VPN restante nesta conta.</string>
     <string name="account_number">Número de conta</string>

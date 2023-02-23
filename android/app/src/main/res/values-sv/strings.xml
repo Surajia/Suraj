@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="account_created">Kontot har skapats</string>
-    <string name="account_credit_expires_in_a_few_minutes">Kontokrediten slutar gälla om några minuter</string>
+    <string name="account_credit_expired_notification">Kontots tidsgräns har uppnåtts</string>
+    <string name="account_credit_expires_in_app_reminder">%1$s. Köp mer kredit.</string>
+    <string name="account_credit_expires_notification">Kontokrediten slutar gälla om %1$s. Köp mer kredit.</string>
     <string name="account_credit_expires_soon">Kontokrediten slutar snart gälla</string>
     <string name="account_credit_has_expired">Du har ingen VPN-tid kvar på det här kontot.</string>
     <string name="account_number">Kontonummer</string>
