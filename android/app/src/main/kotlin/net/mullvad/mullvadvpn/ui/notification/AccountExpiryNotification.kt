@@ -1,18 +1,18 @@
 package net.mullvad.mullvadvpn.ui.notification
 
-import android.content.Context
+import android.content.res.Resources
 import net.mullvad.mullvadvpn.R
 import net.mullvad.mullvadvpn.util.TimeLeftFormatter
 import org.joda.time.DateTime
 
 class AccountExpiryNotification(
-    context: Context,
+    val resources: Resources,
 ) : InAppNotification() {
-    private val timeLeftFormatter = TimeLeftFormatter(context.resources)
+    private val timeLeftFormatter = TimeLeftFormatter(resources)
 
     init {
         status = StatusLevel.Error
-        title = context.getString(R.string.account_credit_expires_soon)
+        title = resources.getString(R.string.account_credit_expires_soon)
     }
 
     fun updateAccountExpiry(expiry: DateTime?) {
