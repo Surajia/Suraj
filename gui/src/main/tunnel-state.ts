@@ -2,6 +2,8 @@ import { connectEnabled, disconnectEnabled, reconnectEnabled } from '../shared/c
 import { TunnelState } from '../shared/daemon-rpc-types';
 import { Scheduler } from '../shared/scheduler';
 
+const DEBOUNCE_DELAY = 150;
+
 export interface TunnelStateProvider {
   getTunnelState(): TunnelState;
 }
@@ -11,6 +13,10 @@ export interface TunnelStateHandlerDelegate {
 }
 
 export default class TunnelStateHandler {
+  // Debounce incoming tunnel events to avoid acting on all queued up events after s0 sleep.
+  private lastTunnelStateUpdateTime = 0;
+  private tunnelStateDebounceScheduler: Scheduler = new Scheduler();
+
   // The current tunnel state
   private tunnelStateValue: TunnelState = { state: 'disconnected' };
   // When pressing connect/disconnect/reconnect the app assumes what the next state will be before
@@ -49,6 +55,21 @@ export default class TunnelStateHandler {
   }
 
   public handleNewTunnelState(newState: TunnelState) {
+    // Only act on events when there hasn't been any events for DEBOUNCE_DELAY, and only act on the
+    // last one after delaying.
+    if (
+      Date.now() - this.lastTunnelStateUpdateTime < DEBOUNCE_DELAY ||
+      this.tunnelStateDebounceScheduler.isRunning
+    ) {
+      this.tunnelStateDebounceScheduler.schedule(
+        () => this.handleNewTunnelState(newState),
+        DEBOUNCE_DELAY,
+      );
+      return;
+    }
+
+    this.lastTunnelStateUpdateTime = Date.now();
+
     // If there's a fallback state set then the app is in an assumed next state and need to check
     // if it's now reached or if the current state should be ignored and set as the fallback state.
     if (this.tunnelStateFallback) {

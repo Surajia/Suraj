@@ -49,6 +49,7 @@ Line wrap the file at 100 chars.                                              Th
   in the desktop app.
 - Fix desktop app not quitting properly after switching from unpinned to pinned window.
 - Retry if PQ PSK negotiation fails for any reason.
+- Fix queued up tunnel state events triggering notifications after s0 sleep in desktop app.
 
 #### Android
 - Fix adaptive app icon which previously had a displaced nose and some other oddities.
