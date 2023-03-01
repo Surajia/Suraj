@@ -172,7 +172,7 @@ export class DaemonRpc {
     });
   }
 
-  public disconnect() {
+  public close() {
     this.isConnectedValue = false;
 
     for (const subscriptionId of this.subscriptions.keys()) {

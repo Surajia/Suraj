@@ -1,5 +1,5 @@
 import { exec, execFile } from 'child_process';
-import { app, nativeTheme, session, shell, systemPreferences } from 'electron';
+import { app, nativeTheme, powerMonitor, session, shell, systemPreferences } from 'electron';
 import fs from 'fs';
 import * as path from 'path';
 import util from 'util';
@@ -181,6 +181,15 @@ class ApplicationMain
       log.info('quit received');
       this.onQuit();
     });
+
+    powerMonitor.on('suspend', () => {
+      log.info('Suspending and disconnecting from daemon');
+      this.onDaemonDisconnected(this.daemonRpc.isConnected);
+    });
+    powerMonitor.on('resume', () => {
+      log.info('Resuming and connecting to daemon');
+      void this.onDaemonConnected();
+    });
   }
 
   public async performPostUpgradeCheck(): Promise<void> {
@@ -325,7 +334,7 @@ class ApplicationMain
     }
 
     if (this.daemonRpc.isConnected) {
-      this.daemonRpc.disconnect();
+      this.daemonRpc.close();
     }
 
     for (const logger of [log, this.rendererLog]) {
