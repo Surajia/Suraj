@@ -184,7 +184,7 @@ class ApplicationMain
 
     powerMonitor.on('suspend', () => {
       log.info('Suspending and disconnecting from daemon');
-      this.onDaemonDisconnected(this.daemonRpc.isConnected);
+      this.onDaemonDisconnected(this.daemonRpc.isConnected, 'suspended');
     });
     powerMonitor.on('resume', () => {
       log.info('Resuming and connecting to daemon');
@@ -573,7 +573,7 @@ class ApplicationMain
     }
   };
 
-  private onDaemonDisconnected = (wasConnected: boolean, error?: Error) => {
+  private onDaemonDisconnected = (wasConnected: boolean, cause?: Error | 'suspended') => {
     if (this.daemonEventListener) {
       this.daemonRpc.unsubscribeDaemonEventListener(this.daemonEventListener);
     }
@@ -587,15 +587,15 @@ class ApplicationMain
       this.userInterface?.updateTray(false, { state: 'disconnected' }, false);
 
       // notify renderer process
-      IpcMainEventChannel.daemon.notifyDisconnected?.();
+      IpcMainEventChannel.daemon.notifyDisconnected?.(cause === 'suspended');
     }
 
     // recover connection on error
-    if (error) {
+    if (cause instanceof Error) {
       if (wasConnected) {
-        log.error(`Lost connection to daemon: ${error.message}`);
+        log.error(`Lost connection to daemon: ${cause.message}`);
       } else {
-        log.error(`Failed to connect to daemon: ${error.message}`);
+        log.error(`Failed to connect to daemon: ${cause.message}`);
       }
     } else {
       log.info('Disconnected from the daemon');

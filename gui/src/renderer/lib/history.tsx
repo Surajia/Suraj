@@ -68,6 +68,7 @@ export default class History {
   private entries: Location<LocationState>[];
   private index = 0;
   private lastAction: Action = 'POP';
+  private paused = false;
 
   public constructor(location: LocationDescriptor, state?: LocationState) {
     this.entries = [this.createLocation(location, state)];
@@ -108,12 +109,14 @@ export default class History {
   };
 
   public reset = (nextLocation: LocationDescriptor, nextState?: Partial<LocationState>) => {
-    const location = this.createLocation(nextLocation, nextState);
-    this.lastAction = 'REPLACE';
-    this.index = 0;
-    this.entries = [location];
+    if (!this.paused) {
+      const location = this.createLocation(nextLocation, nextState);
+      this.lastAction = 'REPLACE';
+      this.index = 0;
+      this.entries = [location];
 
-    this.notify(nextState?.transition ?? transitions.none);
+      this.notify(nextState?.transition ?? transitions.none);
+    }
   };
 
   public listen(callback: LocationListener) {
@@ -124,6 +127,14 @@ export default class History {
   public canGo(n: number) {
     const nextIndex = this.index + n;
     return nextIndex >= 0 && nextIndex < this.entries.length;
+  }
+
+  public pause() {
+    this.paused = true;
+  }
+
+  public resume() {
+    this.paused = false;
   }
 
   // This returns this object casted as History from the History module. The difference between this
@@ -162,14 +173,16 @@ export default class History {
   }
 
   private pushImpl(nextLocation: LocationDescriptor, nextState?: Partial<LocationState>) {
-    const location = this.createLocation(nextLocation, nextState);
-    this.lastAction = 'PUSH';
-    this.index += 1;
-    this.entries.splice(this.index, this.entries.length - this.index, location);
+    if (!this.paused) {
+      const location = this.createLocation(nextLocation, nextState);
+      this.lastAction = 'PUSH';
+      this.index += 1;
+      this.entries.splice(this.index, this.entries.length - this.index, location);
+    }
   }
 
   private popImpl(n = 1): ITransitionSpecification | undefined {
-    if (this.canGo(-n)) {
+    if (!this.paused && this.canGo(-n)) {
       this.lastAction = 'POP';
       this.index -= n;
 

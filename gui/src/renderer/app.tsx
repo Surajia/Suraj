@@ -117,8 +117,8 @@ export default class AppRenderer {
       void this.onDaemonConnected();
     });
 
-    IpcRendererEventChannel.daemon.listenDisconnected(() => {
-      this.onDaemonDisconnected();
+    IpcRendererEventChannel.daemon.listenDisconnected((suspended) => {
+      this.onDaemonDisconnected(suspended);
     });
 
     IpcRendererEventChannel.daemon.listenIsPerformingPostUpgrade((isPerformingPostUpgrade) => {
@@ -636,13 +636,19 @@ export default class AppRenderer {
     this.connectedToDaemon = true;
     this.reduxActions.userInterface.setConnectedToDaemon(true);
     this.reduxActions.userInterface.setDaemonAllowed(true);
+    this.history?.resume();
     this.resetNavigation();
   }
 
-  private onDaemonDisconnected() {
+  private onDaemonDisconnected(suspended: boolean) {
     this.connectedToDaemon = false;
     this.reduxActions.userInterface.setConnectedToDaemon(false);
-    this.resetNavigation();
+
+    if (suspended) {
+      this.history.pause();
+    } else {
+      this.resetNavigation();
+    }
   }
 
   private resetNavigation() {

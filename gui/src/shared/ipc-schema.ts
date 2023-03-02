@@ -127,7 +127,7 @@ export const ipcSchema = {
     isPerformingPostUpgrade: notifyRenderer<boolean>(),
     daemonAllowed: notifyRenderer<boolean>(),
     connected: notifyRenderer<void>(),
-    disconnected: notifyRenderer<void>(),
+    disconnected: notifyRenderer<boolean>(),
   },
   relays: {
     '': notifyRenderer<IRelayListWithEndpointData>(),
