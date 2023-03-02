@@ -652,6 +652,7 @@ export default class AppRenderer {
   }
 
   private resetNavigation() {
+    log.info(new Error().stack);
     if (this.history) {
       const pathname = this.history.location.pathname as RoutePath;
       const nextPath = this.getNavigationBase() as RoutePath;
