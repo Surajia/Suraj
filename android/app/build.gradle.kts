@@ -211,6 +211,7 @@ dependencies {
     implementation(Dependencies.Compose.foundation)
     implementation(Dependencies.Compose.viewModelLifecycle)
     implementation(Dependencies.Compose.material)
+    implementation(Dependencies.Compose.material3)
     implementation(Dependencies.Compose.uiController)
     implementation(Dependencies.Compose.ui)
     implementation(Dependencies.Compose.uiUtil)

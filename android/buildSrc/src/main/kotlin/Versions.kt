@@ -43,6 +43,7 @@ object Versions {
         const val constrainLayout = "1.0.1"
         const val foundation = "1.3.1"
         const val material = "1.3.1"
+        const val material3 = "1.0.0-rc01"
         const val uiController = "0.28.0"
         const val viewModelLifecycle = "2.5.1"
     }
