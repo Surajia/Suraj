@@ -51,6 +51,8 @@ impl Udp2Tcp {
                 fwmark: settings.fwmark,
                 // Disables the Nagle algorithm on the TCP socket. Improves performance
                 nodelay: true,
+                recv_buffer_size: Some(512 * 1024),
+                send_buffer_size: Some(512 * 1024),
                 ..TcpOptions::default()
             },
         )
