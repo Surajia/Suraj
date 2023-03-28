@@ -5,17 +5,9 @@ import net.mullvad.mullvadvpn.R
 import net.mullvad.mullvadvpn.ui.extension.getAlwaysOnVpnAppName
 import net.mullvad.talpid.tunnel.ErrorState
 import net.mullvad.talpid.tunnel.ErrorStateCause
-import net.mullvad.talpid.util.addressString
 
 fun ErrorState.getErrorNotificationResources(context: Context): ErrorNotificationMessage {
     return when {
-        cause is ErrorStateCause.InvalidDnsServers -> {
-            ErrorNotificationMessage(
-                R.string.blocking_internet,
-                cause.errorMessageId(),
-                cause.addresses.joinToString { address -> address.addressString() }
-            )
-        }
         cause is ErrorStateCause.VpnPermissionDenied -> {
             resolveAlwaysOnVpnErrorNotificationMessage(context.getAlwaysOnVpnAppName())
         }
