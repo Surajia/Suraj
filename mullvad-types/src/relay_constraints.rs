@@ -534,7 +534,7 @@ pub struct Udp2TcpObfuscationSettings {
         target_os = "android",
         jnix(map = "|constraint| constraint.map(|v| v as i32)")
     )]
-    #[cfg_attr(target_os = "android", jnix(default))]
+    #[cfg_attr(target_os = "android", jnix(skip))]
     pub port: Constraint<u16>,
 }
 

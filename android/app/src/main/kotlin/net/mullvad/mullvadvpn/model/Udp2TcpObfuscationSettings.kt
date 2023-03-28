@@ -4,7 +4,4 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class Udp2TcpObfuscationSettings(
-    // TODO: currently ignored by mullvad-jni
-    val port: Constraint<Int>
-) : Parcelable
+data class Udp2TcpObfuscationSettings() : Parcelable
