@@ -12,9 +12,9 @@ import { useSelector } from '../redux/store';
 import { calculateHeaderBarStyle, DefaultHeaderBar } from './HeaderBar';
 import ImageView from './ImageView';
 import { Container, Layout } from './Layout';
-import Map, { MarkerStyle, ZoomLevel } from './Map';
 import NotificationArea from './NotificationArea';
 import TunnelControl from './TunnelControl';
+import Map, { MarkerStyle } from './WebGlMap';
 
 type MarkerOrSpinner = 'marker' | 'spinner' | 'none';
 
@@ -111,27 +111,6 @@ export default function Connect() {
     }
   }, [connection.status]);
 
-  const zoomLevel = useMemo<ZoomLevel>(() => {
-    const { longitude, latitude } = connection;
-
-    if (typeof longitude === 'number' && typeof latitude === 'number') {
-      return connection.status.state === 'connected' ? ZoomLevel.high : ZoomLevel.medium;
-    } else {
-      return ZoomLevel.low;
-    }
-  }, [connection.latitude, connection.longitude, connection.status.state]);
-
-  const mapProps = useMemo<Map['props']>(() => {
-    return {
-      center: mapCenter ?? [0, 0],
-      showMarker: showMarkerOrSpinner === 'marker',
-      markerStyle,
-      zoomLevel,
-      // a magic offset to align marker with spinner
-      offset: [0, mapCenter ? 123 : 0],
-    };
-  }, [mapCenter, showMarkerOrSpinner, markerStyle, zoomLevel]);
-
   const onSelectLocation = useCallback(() => {
     history.push(RoutePath.selectLocation, { transition: transitions.show });
   }, [history.push]);
@@ -172,7 +151,7 @@ export default function Connect() {
     <Layout>
       <DefaultHeaderBar barStyle={calculateHeaderBarStyle(connection.status)} />
       <StyledContainer>
-        <StyledMap {...mapProps} />
+        <StyledMap location={mapCenter ?? [0, 0]} markerStyle={markerStyle} />
         <Content>
           <StyledNotificationArea />
 
